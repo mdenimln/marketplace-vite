@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Label from "./label"
 import Input from "./input"
 const InputForm = (props) => {

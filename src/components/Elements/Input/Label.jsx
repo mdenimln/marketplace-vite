@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const Label = (props) => {
     const {children, hatmlFor, name} = props
     return(
