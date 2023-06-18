@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-
 import Button from "../Elements/Button";
-
 const CartProducts = ({ children }) => {
     return(
         <div className="w-full max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow">
