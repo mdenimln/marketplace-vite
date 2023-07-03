@@ -2,7 +2,7 @@
 import Button from "../Elements/Button";
 const CartProducts = ({ children }) => {
     return(
-        <div className="w-full max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow flex flex-col justify-between">
+        <div className="w-full max-w-xs bg-gray-800 border border-gray-700 rounded-lg shadow flex flex-col justify-between">
             {children}
         </div>
     )
@@ -31,11 +31,11 @@ const Body = ({name, children}) => {
         </div>
     )
 }
-const Footer = ({price}) => {
+const Footer = ({price, handleAddToCart, confId}) => {
     return(
         <div className="flex items-center justify-between px-5 py-4">
-            <span className="text-xl font-bold text-white">{price}</span>
-            <Button classname="bg-blue-600">Add to cart</Button>
+            <span className="text-xl font-bold text-white">{price.toLocaleString("id-ID", { style: "currency", currency: "IDR" })}</span>
+            <Button classname="bg-blue-600" onClick={() => handleAddToCart(confId)}>Add to cart</Button>
         </div>
     )
 }

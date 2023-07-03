@@ -7,7 +7,6 @@ const FormLogin = () => {
     localStorage.setItem("email", e.target.email.value);
     localStorage.setItem("password", e.target.password.value);
     window.location.href = "/products";
-    console.log("Login");
   }
     return(
         <form onSubmit={handleLogin}>
