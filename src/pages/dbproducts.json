@@ -1,0 +1,39 @@
+ [
+    {
+        "id": "1",
+        "image": "/images/shoes1.jpg",
+        "name": "Product satu",
+        "price": 200000,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio qui quisquam, voluptatibus ipsa dolorem eligendi aut eaque quibusdam maxime officiis sed distinctio totam ipsam possimus id accusantium iusto dignissimos architecto?"
+    },
+    {
+        "id": "2",
+        "image": "/images/shoes1.jpg",
+        "name": "Product dua",
+        "price": 300000,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "id": "3",
+        "image": "/images/shoes1.jpg",
+        "name": "Product tiga",
+        "price": 400000,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "id": "2",
+        "image": "/images/shoes1.jpg",
+        "name": "Product dua",
+        "price": 300000,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio qui quisquam, voluptatibus ipsa dolorem eligendi aut eaque quibusdam maxime officiis sed distinctio totam ipsam possimus id accusantium iusto dignissimos architecto?"
+    },
+    {
+        "id": "2",
+        "image": "/images/shoes1.jpg",
+        "name": "Product dua",
+        "price": 300000,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio qui quisquam, voluptatibus ipsa dolorem eligendi aut eaque quibusdam maxime officiis sed distinctio totam ipsam possimus id accusantium iusto dignissimos architecto?"
+    }
+]
+
+
