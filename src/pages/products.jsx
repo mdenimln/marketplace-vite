@@ -1,13 +1,31 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import CartProducts from "../components/Fragments/CartProducts";
 import Button from "../components/Elements/Button";
 import Products from "./dbproducts.json"
 
 
+
 const email = localStorage.getItem("email");
 const ProductsPage = () => {
     const [cart, setCart] = useState([]);
-      
+    const [totalPrice, setTotalPrice] = useState(0);
+    
+    // lifecycle digmonth
+    useEffect(() => {
+        setCart(JSON.parse(localStorage.getItem("cart")) || []);         
+    }, [])
+    // lifecycle digmonth update   
+    useEffect(() => {
+        if(cart.length > 0) {
+            const sum = cart.reduce((acc, item) => {
+                const product = Products.find((product) => product.id === item.id);
+                return acc + product.price * item.qty;
+            }, 0);
+            setTotalPrice(sum);
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+    }, [cart])
+
     const handleLogout = () => {
         localStorage.removeItem("email");
         localStorage.removeItem("password");
@@ -69,6 +87,10 @@ const ProductsPage = () => {
                                    </tr> 
                                 )
                             })}
+                            <tr>
+                                <td colSpan={3}><b>price</b></td>
+                                <td><b>{totalPrice.toLocaleString("id-ID", { style: "currency", currency: "IDR" })}</b></td>  
+                            </tr>
                         </tbody>
                     </table>
                 </div>
