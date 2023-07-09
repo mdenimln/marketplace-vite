@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import Button from "../Elements/Button";
+
 const CartProducts = ({ children }) => {
     return(
         <div className="w-full max-w-xs bg-gray-800 border border-gray-700 rounded-lg shadow flex flex-col justify-between">
@@ -8,15 +10,15 @@ const CartProducts = ({ children }) => {
     )
 }
 
-const Header = ({image}) => {
+const Header = ({image, id}) => {
     return(
-        <a href="#">
+        <Link to={`/product/${id}`}>
             <img 
             src={image} 
             alt="product" 
             className="p-8 rounded-t-lg h-60 w-full object-cover" 
             />
-        </a>
+        </Link>
     )
 }
 const Body = ({name, children}) => {
