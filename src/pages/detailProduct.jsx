@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Navbar from "../components/Layout/Navbar";
 import { getDetailProduct } from "../services/product.service";
 const DetailProductPage = () => {
   const params = useParams();
@@ -13,6 +14,8 @@ const DetailProductPage = () => {
   }, [id]);
   console.log(product);
   return (
+    <>
+   <Navbar />
     <div className="w-100 min-h-screen flex justify-center items-center">
      {Object.keys(product).length > 0 && (
           <div className="flex font-sans max-w-xl">
@@ -80,6 +83,7 @@ const DetailProductPage = () => {
         </div>
      )}
     </div>
+    </>
   );
 };
 export default DetailProductPage;

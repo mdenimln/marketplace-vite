@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import Button from "../Elements/Button";
+import {useDispatch} from "react-redux";
+import {addToCart} from "../../redux/slices/cartSlice";
 
 const CartProducts = ({ children }) => {
     return(
@@ -33,11 +35,12 @@ const Body = ({name, children}) => {
         </div>
     )
 }
-const Footer = ({price, handleAddToCart, id}) => {
+const Footer = ({price, id}) => {
+    const dispatch = useDispatch();
     return(
         <div className="flex items-center justify-between px-5 py-4">
             <span className="text-xl font-bold text-white">{price.toLocaleString("id-ID", { style: "currency", currency: "USD" })}</span>
-            <Button classname="bg-blue-600" onClick={() => handleAddToCart(id)}>Add to cart</Button>
+            <Button classname="bg-blue-600" onClick={() => dispatch(addToCart({id, qty: 1}))}>Add to cart</Button>
         </div>
     )
 }
