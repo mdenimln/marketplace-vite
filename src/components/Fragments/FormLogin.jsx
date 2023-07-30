@@ -35,7 +35,7 @@ const FormLogin = () => {
         <InputForm 
           label="username" 
           type="username" 
-          placeholder="john" 
+          placeholder="john Doe" 
           name="username"
           // ref={usernameRef}
           >
